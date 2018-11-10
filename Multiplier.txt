@@ -1,0 +1,35 @@
+--
+-- VHDL Architecture vlsi.Multiplier_VHDL.Behavioral
+--
+-- Created:
+--          by - Omar EL-Ganayni.UNKNOWN (OMAREL-GANAYNI)
+--          at - 18:28:30 11/22/2013
+--
+-- using Mentor Graphics HDL Designer(TM) 2007.1 (Build 19)
+--
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.NUMERIC_STD.ALL;
+
+ 
+entity Multiplier_VHDL is
+   port
+   (
+      A, B: in std_logic_vector(31 downto 0);
+      clk:in std_logic ;
+ 
+      Result: out std_logic_vector(63 downto 0)
+   );
+end entity Multiplier_VHDL;
+ 
+architecture Behavioral of Multiplier_VHDL is
+
+
+
+
+begin
+ 
+   Result <= std_logic_vector(unsigned(A) * unsigned(B));
+     
+ 
+end architecture Behavioral;

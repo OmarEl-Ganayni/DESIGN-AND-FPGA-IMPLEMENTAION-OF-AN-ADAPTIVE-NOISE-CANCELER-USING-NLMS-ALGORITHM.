@@ -1,0 +1,24 @@
+--
+-- VHDL Architecture vlsi.sub.archi
+--
+-- Created:
+--          by - Omar EL-Ganayni.UNKNOWN (OMAREL-GANAYNI)
+--          at - 22:49:31 11/22/2013
+--
+-- using Mentor Graphics HDL Designer(TM) 2007.1 (Build 19)
+--
+library ieee;  
+use ieee.std_logic_1164.all;  
+use ieee.std_logic_unsigned.all;
+ 
+ 
+entity sub is  
+  port(A,B : in std_logic_vector(31 downto 0);
+    clk : in std_logic;    
+    result : out std_logic_vector(31 downto 0));  
+end sub;  
+architecture archi of sub is  
+  begin  
+    result <= A - B;  
+        
+end archi; 

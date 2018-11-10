@@ -1,0 +1,35 @@
+--
+-- VHDL Architecture vlsi.divider.RTL
+--
+-- Created:
+--          by - Omar EL-Ganayni.UNKNOWN (OMAREL-GANAYNI)
+--          at - 21:18:37 11/24/2013
+--
+-- using Mentor Graphics HDL Designer(TM) 2007.1 (Build 19)
+--
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_unsigned.all; 
+use ieee.numeric_std.all;
+--use IEEE.MATH_REAL.ALL;
+
+
+
+
+
+entity divider is
+port(B: in std_logic_vector(31 downto 0);
+clk:in std_logic;
+result:out std_logic_vector(31 downto 0));
+
+end divider;
+
+
+architecture RTL of divider is
+signal temp: std_logic_vector( 31 downto 0):="01000011000110111101111010000010";
+begin
+ 
+
+Result <= std_logic_vector(unsigned(temp) / unsigned(B));
+end RTL;
+
